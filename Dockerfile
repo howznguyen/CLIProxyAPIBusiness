@@ -10,7 +10,7 @@ COPY web/ ./
 
 RUN npm run build
 
-FROM golang:1.25-alpine AS builder
+FROM golang:1.26-alpine AS builder
 
 WORKDIR /app
 
@@ -36,7 +36,7 @@ WORKDIR /CLIProxyAPIBusiness
 
 EXPOSE 8318
 
-ENV TZ=Asia/Shanghai
+ENV TZ=Asia/Ho_Chi_Minh
 
 RUN cp /usr/share/zoneinfo/${TZ} /etc/localtime && echo "${TZ}" > /etc/timezone
 
